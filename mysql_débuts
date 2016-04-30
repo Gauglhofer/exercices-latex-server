@@ -1,13 +1,14 @@
-mysql -u root -p                           %en local (ssh ?)
-mysql -h hostname -u username -p           %where hostname is the host name of the MySQL server
+mysql -u root -p                           //en local (ssh ?)
+mysql -h hostname -u username -p           //where hostname is the host name of the MySQL server
 
-create database tests;
+CREATE DATABASE tests;
 
-use tests;
+USE tests;
 
-create table fichiers_entiers ( id int not null auto_increment primary key, le_latex text, le_pdf mediumblob, le_type char(5) not null, l_auteur text not null, l_annee char(11) not null) default character set utf8;
+CREATE TABLE fichiers_entiers ( id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, le_nom TEXT NOT NULL, le_type CHAR(5) NOT NULL, l_auteur TEXT NOT NULL, l_annee YEAR(4) NOT NULL, latex TINYINT NOT NULL) DEFAULT CHARACTER SET utf8;
 
-insert into fichiers_entiers set le_type = "3MsBi", l_auteur = "Thomas Gauglhofer", l_annee = "2015 - 2016", le_latex = load_file('/home/gauglhofer/Google Drive/Nyon/2015-2016/3MMsBi/Test6.tex');
+
+INSERT INTO fichiers_entiers SET le_type = "3MsBi", l_auteur = "Thomas Gauglhofer", l_annee = "2016", le_nom = "Test7", latex = 1;
 
 
 
