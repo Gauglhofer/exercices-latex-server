@@ -21,11 +21,13 @@
           else { $login_form='';
               }
           echo $login_form;
-      ?>
-      <?php
-          if ($_POST["userid"] == 'gau') { $accueil=file_get_contents('accueil.html');
+          $userid=$_POST["userid"];
+          $userpwd=$_POST["userpwd"];
+          if ($userid == 'gau') { $accueil=file_get_contents('accueil.html');
               }
-          else { $accueil='Vous ne vous &ecirc;tes pas correctement identifié !';
+          else {
+                $accueil='';
+                if ($userid != null)  {include 'echec_identification.php';}
               }
           echo $accueil;
       ?>
