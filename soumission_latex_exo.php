@@ -1,6 +1,6 @@
   <?php
-     session_start();
-     $_SESSION["identification"] = false;
+    session_start();
+    $userid=$_SESSION["userid"];
   ?>
 <!DOCTYPE html >
 <html>
@@ -19,21 +19,12 @@
       </div>
       <div class="content_section floating_element">
       <?php
-          if ($_POST["userid"] == null) {$login_form = file_get_contents('login.html');
-              }
-          else { $login_form = '';
-              }
-          echo $login_form;
-          $userid = $_POST["userid"];
-          $_SESSION["userid"] = $userid;
-          $userpwd=$_POST["userpwd"];
-          if ($userid == 'gau') {
-              $accueil = file_get_contents('accueil.html');
-              $_SESSION["identification"] = true;
+          if ($_SESSION["identification"] == true) {
+              $accueil = file_get_contents('accueil4.html');
               }
           else {
                 $accueil = '';
-                if ($userid != null)  {include 'echec_identification.php';}
+                include 'echec_identification.php';
               }
           echo $accueil;
       ?>
@@ -41,4 +32,3 @@
     </div>
   </body>
 </html>
-

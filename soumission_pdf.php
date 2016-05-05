@@ -1,7 +1,3 @@
-  <?php
-     session_start();
-     $_SESSION["identification"] = false;
-  ?>
 <!DOCTYPE html >
 <html>
   <head>
@@ -9,6 +5,9 @@
     <title>Travaux écrits - serveur du Gymnase de Nyon</title>
     <link rel="stylesheet" type="text/css" media="screen" href="mon_style.css">
   </head>
+  <?php
+    session_start();
+    $userid=$_POST["userid"];?>
   <body>
     <div class="main_page">
       <div class="page_header floating_element">
@@ -19,26 +18,22 @@
       </div>
       <div class="content_section floating_element">
       <?php
-          if ($_POST["userid"] == null) {$login_form = file_get_contents('login.html');
+          if $_SESSION["identification"] {
+              echo '<div class="section_header">
+                      <div id="soumission_fichiers_entiers"></div>
+                         Verser un TE en entier (pdf)
+                    </div>
+                    <div class="content_section_text">
+                       <p>
+                          bla bla bla...
+                       </p>
+                    </div>';
               }
-          else { $login_form = '';
-              }
-          echo $login_form;
-          $userid = $_POST["userid"];
-          $_SESSION["userid"] = $userid;
-          $userpwd=$_POST["userpwd"];
-          if ($userid == 'gau') {
-              $accueil = file_get_contents('accueil.html');
-              $_SESSION["identification"] = true;
-              }
-          else {
-                $accueil = '';
-                if ($userid != null)  {include 'echec_identification.php';}
-              }
-          echo $accueil;
+          else {include 'echec_identification.php';}
       ?>
       </div>
     </div>
   </body>
 </html>
+
 
