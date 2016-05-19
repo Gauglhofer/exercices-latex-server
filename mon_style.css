@@ -17,7 +17,7 @@
     position: relative;
     display: table;
 
-    width: 800px;
+    width: 1000px;
 
     margin-bottom: 3px;
     margin-left: auto;
@@ -39,14 +39,14 @@
   }
 
   div.page_header span {
-    margin: 15px 0px 0px 50px;
+    margin: 15px 20px 15px 20px;
 
     font-size: 180%;
     font-weight: bold;
   }
 
   div.page_header img {
-    margin: 15px 0px 0px 40px;
+    margin: 15px 20px 15px 20px;
 
     border: 0px 0px 0px;
   }
@@ -80,7 +80,7 @@
 
 
   div.content_section_text form {
-    margin: 12px 0px 6px 520px;
+    margin: 12px 20px 6px 20px;
   }
 
 
@@ -94,6 +94,9 @@
     margin-bottom: 6px;
   }
 
+  div.content_section_text ul, div.content_section_text li {
+    padding: 4px 8px 4px 16px;
+  }
 
   div.section_header {
     padding: 3px 6px 3px 6px;
@@ -105,12 +108,17 @@
     font-size: 112%;
     text-align: center;
 
-    width: 780px;
+    width: 982px;
   }
 
   .floating_element {
     position: relative;
     float: left;
+  }
+
+  .floating_element_right {
+    position: relative;
+    float: right;
   }
 
   .static_element {

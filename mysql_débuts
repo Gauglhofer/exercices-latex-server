@@ -1,14 +1,34 @@
 mysql -u root -p                           //en local (ssh ?)
 mysql -h hostname -u username -p           //where hostname is the host name of the MySQL server
 
+
 CREATE DATABASE tests;
 
 USE tests;
 
-CREATE TABLE fichiers_entiers ( id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, le_nom TEXT NOT NULL, le_type CHAR(5) NOT NULL, l_auteur TEXT NOT NULL, l_annee YEAR(4) NOT NULL, latex TINYINT NOT NULL) DEFAULT CHARACTER SET utf8;
+CREATE TABLE fichiers_entiers (fileid INT NOT NULL AUTO_INCREMENT PRIMARY KEY, nom_sans_ext VARCHAR(50) NOT NULL, type VARCHAR(5) NOT NULL, auteur VARCHAR(50) NOT NULL, annee YEAR(4) NOT NULL, latex TINYINT) DEFAULT CHARACTER SET utf8;
 
 
-INSERT INTO fichiers_entiers SET le_type = "3MsBi", l_auteur = "Thomas Gauglhofer", l_annee = "2016", le_nom = "Test7", latex = 1;
 
 
+CREATE DATABASE examens;
+
+USE examens;
+
+CREATE TABLE problemes (problem_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, gymnase VARCHAR(30) NOT NULL, nom VARCHAR(30) NOT NULL UNIQUE, annee YEAR(4) NOT NULL, Mr VARCHAR(15), Ms VARCHAR(15), C VARCHAR(15), E VARCHAR(15)) DEFAULT CHARACTER SET utf8;
+
+CREATE TABLE geom2d (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, problem_id INT NOT NULL FOREIGN KEY REFERENCES problemes(problem_id), droite_gen_incl TINYINT, perp_parall TINYINT, biss_med TINYINT, points_triang TINYINT, dist_point_droite TINYINT, proj_sym TINYINT, cercle_gen_incl TINYINT, tang_cercle TINYINT);
+
+CREATE TABLE geom3d (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, problem_id INT NOT NULL FOREIGN KEY REFERENCES problemes(problem_id), plan_droite_gen_incl TINYINT, plans_biss_med TINYINT, points_triang TINYINT, dist_point_droite_plan TINYINT, dist_droite_droite TINYINT, proj_sym TINYINT, sphere_gen_incl TINYINT, tang_sphere TINYINT, inters_plan_sphere TINYINT);
+
+CREATE TABLE prob_stat (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, problem_id INT NOT NULL FOREIGN KEY REFERENCES problemes(problem_id), combi TINYINT, proba_gen_incl TINYINT, proba_combi TINYINT, proba_venn TINYINT, proba_arbre TINYINT, proba_cond TINYINT, proba_binom TINYINT);
+
+CREATE TABLE complexes (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, problem_id INT NOT NULL FOREIGN KEY REFERENCES problemes(problem_id));
+
+CREATE TABLE alg_lin (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, problem_id INT NOT NULL FOREIGN KEY REFERENCES problemes(problem_id), gen_incl TINYINT, calc_matr TINYINT, syst_lin TINYINT, dim TINYINT, rang TINYINT, diag TINYINT, interp TINYINT);
+
+
+
+
+INSERT INTO alg_lin SET problem_id=(SELECT LAST_INSERT_ID()), dim="1", diag="1";
 

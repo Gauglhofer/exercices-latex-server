@@ -13,7 +13,7 @@
     <div class="main_page">
       <div class="page_header floating_element">
         <img src="logo_gymnase.png" alt="Logo du Gymnase de Nyon" class="floating_element" height="60px" />
-        <span class="floating_element">
+        <span class="floating_element_right">
             Gymnase de Nyon<br>Travaux écrits de mathématiques
         </span>
       </div>

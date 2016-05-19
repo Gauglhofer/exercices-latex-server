@@ -4,10 +4,10 @@
 </div>
 <div class="content_section_text">
     <p>
-        Désolé <?php echo $userid;?>, le serveur n'est actuellement pas disponible pour vous.
+        Désolé <?php echo ucfirst($userid);?>, le serveur n'est actuellement pas disponible pour vous.
     </p>
 </div>
-<?php
-    session_unset ();
-    session_destroy ();
-?>
+  <?php
+    session_unset();
+    session_destroy();
+  ?>

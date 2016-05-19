@@ -1,0 +1,66 @@
+Algèbre de base
+	Puissances, racines et logarithmes
+Trigonométrie 
+	Généralités / inclassable [*]
+	Équation trigonométrique
+Analyse 
+	Étude de fonctions
+		Généralités / inclassable [*]
+		Fonction rationnelle
+			selon formulaire [*]
+			sans dérivée
+			avec position relative de l'asymptote oblique ou horizontale
+			avec convexité
+		Fonction irrationnelle
+		Fonction trigonométrique
+		Fonction logarithmique
+		Fonction exponentielle
+	Suite de nombres réels / récurrence 
+	Limite d'une fonction / continuité
+	Dérivée seule
+	Tangente à un graphe
+	Optimisation
+	Intégrale / primitive
+	Aire (utilisant l'intégrale)
+	Volume (utilisant l'intégrale) 
+Géométrie 2D
+	Équation paramétrique / cartésienne d'une droite 
+		Généralités / inclassable [*]
+		Droites parallèles / perpendiculaires
+		Bissectrices / médiatrices / médianes
+		Points remarquables d'un triangle (orthocentre, centre du cercle inscrit,...)
+		Distance entre un point et une droite
+		Projections sur / symétries par rapport à une droite
+	Équation d'un cercle 
+		Généralités / inclassable [*]
+		Tangentes à un cercle
+Géométrie 3D
+	Équation paramétrique / cartésienne d'un plan / d'une droite 
+		Généralités / inclassable [*]
+		Plans bissecteurs / médiateurs
+		Points remarquables d'un triangle (orthocentre, centre du cercle inscrit,...)
+		Distance entre un point et une droite / un plan
+		Distance minimale entre deux droites
+		Projections sur / symétries par rapport à une droite / un plan
+	Équation d'une sphère 
+		Généralités / inclassable [*]
+		Plans tangents à une sphère
+		Intersection entre un plan et une sphère
+Combinatoire, probabilité et statistique
+	Combinatoire seule
+	Probabilité
+		Généralités / inclassable [*]
+		Probabilité utilisant la combinatoire
+		Probabilité utilisant un diagramme de Venn
+		Probabilité utilisant un schéma en arbre
+		Probabilité conditionnelle
+		Processus binomial
+Nombres complexes
+Algèbre linéaire
+	Généralités / inclassable [*]
+	Calcul matriciel
+	Systèmes linéaires
+	Bases / dimension
+	Noyau / image / théorème du rang
+	Valeurs propres / espaces propres / diagonalisation
+	Interprétation géométrique d'un endomorphisme

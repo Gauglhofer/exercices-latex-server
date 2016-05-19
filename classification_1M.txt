@@ -1,0 +1,30 @@
+Logique élémentaire et ensembles
+Algèbre de base (Attention : équations de degrés 1 et 2 et inclassable sous Analyse)
+	Révision secondaire I [*] 
+	Opérations sur des polynômes (y inclue la division) [*]
+	Factorisation de polynômes (degré > 2) [*]
+	Factorisation de fractions rationnelles [*]
+Trigonométrie 
+	Généralités / inclassable [*]
+	Résolution de triangles
+	Secteur circulaire / applications cartographiques
+	Équation trigonométrique
+Analyse 
+	Généralités / inclassable [*]
+	Fonction affine / équations du 1er degré
+	Fonction quadratique / équations du 2ème degré
+	Tableau des signes / inéquations
+Géométrie 2D
+	Généralités / inclassable [*]
+	Repères et bases
+	Vecteurs colinéaires
+	Milieu, centre de gravité
+	Distances et angles	
+Géométrie 3D
+	Généralités / inclassable [*]
+	Repères et bases
+	Vecteurs colinéaires / coplanaires
+	Milieu, centre de gravité
+	Distances et angles
+Combinatoire, probabilité et statistique
+	Statistique descriptive
